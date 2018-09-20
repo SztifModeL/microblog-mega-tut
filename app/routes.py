@@ -25,6 +25,6 @@ def login():
     if form.validate_on_submit():
         flash('Login requested for user {}, remember_me={}'.format(  # flash() funkcja jest uzytecznym sposobem wyswietlenia wiadomosci uzytkownikowi
             form.username.data, form.remember_me.data))
-        return redirect('/index')
+        return redirect(url_for('index'))  # Flask zapewnia funkcje o nazwie url_for(), ktora generuje adresy URL za pomoca wewnetrznego mapowania adresow URL do przegladania funkcji
     return render_template('login.html', title='Sign In', form=form)  # -> wyrenderuj szablon login.html z wykorzystaniem danych z 'form'
 
