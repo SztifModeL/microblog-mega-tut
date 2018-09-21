@@ -21,7 +21,7 @@ def index():
 
 @app.route('/login', methods=['GET', 'POST'])  # --> po wejsciu na /login uruchom i dodatkowo akceptuj GET i POST a nie tylko domyslne GET
 def login():
-    form = LoginForm()  # -> stworz instancje 'form' klasy 'LoginForm' z form.py ->
+    form = LoginForm()  # -> stworz instancje 'form' klasy 'LoginForm' z forms.py ->
     if form.validate_on_submit():
         flash('Login requested for user {}, remember_me={}'.format(  # flash() funkcja jest uzytecznym sposobem wyswietlenia wiadomosci uzytkownikowi
             form.username.data, form.remember_me.data))
