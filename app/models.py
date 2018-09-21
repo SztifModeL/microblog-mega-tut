@@ -6,5 +6,5 @@ class User(db.Model):
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
 
-    def __repr__(self):  # __repr__Metoda mówi Python sposób drukowania obiektów tej klasy, która będzie przydatna do debugowania
+    def __repr__(self):  # __repr__Metoda mowi Python sposob drukowania obiektow tej klasy, ktora bedzie przydatna do debugowania
         return '<User {}>'.format(self.username)
