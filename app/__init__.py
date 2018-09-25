@@ -12,6 +12,7 @@ db = SQLAlchemy(app)  # db - obiekt reprezentujacy baze danych
 migrate = Migrate(app, db)  # obiekt reprezentujacy silnik migracji
 
 login = LoginManager(app)
+login.login_view = 'login'
 
 from app import routes, models  # models - modul okresli strukture bazy danych
 
