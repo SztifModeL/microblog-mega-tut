@@ -10,6 +10,15 @@
         <div>
             Microblog:
             <a href="{{ url_for('index') }}">Home</a>  <!--Flask zapewnia funkcję o nazwie url_for(), która generuje adresy URL za pomocą wewnętrznego mapowania adresów URL do przeglądania funkcji-->
+            {% if current_user.is_anonymous %}
+            <a href="{{ url_for('login') }}">Login</a>  <!--opcja Login jak user == niezalogowany-->
+            {% else %}
+            <a href="{{ url_for('logout') }}">Logout</a>  <!--w innym wypadku opcja Logout-->
+            {% endif %}
+        </div>
+        <div>
+            Microblog:
+            <a href="{{ url_for('index') }}">Home</a>
             <a href="{{ url_for('login') }}">Login</a>
         </div>
         <hr>
