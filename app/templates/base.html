@@ -18,7 +18,7 @@
             {% endif %}
         </div>
         <hr>
-        {% with messages = get_flashed_messages() %}  <!-- uzywam with konstrukcji, aby przypisać wynik wywołania get_flashed_messages()do messageszmiennej, wszystko w kontekście szablonu -> get_flashed_messages()Funkcja pochodzi z kolby i zwraca listę wszystkich wiadomości, które zostały zarejestrowane flash()wcześniej-->
+        {% with messages = get_flashed_messages() %}  <!-- uzywam with konstrukcji, aby przypisać wynik wywołania get_flashed_messages() do zmiennej messages, wszystko w kontekście szablonu -> get_flashed_messages()Funkcja pochodzi z kolby i zwraca listę wszystkich wiadomości, które zostały zarejestrowane flash()wcześniej-->
         {% if messages %}
         <ul>
             {% for message in messages %}
