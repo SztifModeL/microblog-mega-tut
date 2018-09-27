@@ -18,6 +18,5 @@ from app import routes, models  # models - modul okresli strukture bazy danych
 
 
 # Sposob na odpalanie aplikacji
-# if __name__ == "__main__":
-#     app.run()
-    # app.run(host='0.0.0.0', port=8080, debug=False, threaded=True)
+if __name__ == "__main__":
+    app.run(debug=False)

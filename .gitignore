@@ -65,16 +65,7 @@ fabric.properties
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
 
-# Moje dodane przez GitEXT w microblog.py
-/.idea/workspace.xml
-/app/__init__.pyc
-/app/forms.pyc
-/app/models.pyc
-/config.pyc
-/microblog.pyc
-/migrations/env.pyc
-/migrations/versions/0d6d8544ed7e_posts_table.pyc
-/migrations/versions/60125108c134_users_table.pyc
-
-/.idea/workspace.xml
-/.idea/workspace.xml
+# Moje
+.idea
+*.log
+*.pyc

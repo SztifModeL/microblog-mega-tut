@@ -61,7 +61,7 @@ def register():
     return render_template('register.html', title='Register', form=form)
 
 
-@app.route('/user/<username>')  # kierowanie do wynamicznie generowanego poadresu dla uzytkownika
+@app.route('/user/<username>')  # kierowanie do dynamicznie generowanego pod-adresu dla uzytkownika
 @login_required
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()  # dziala tak samo jak first() ale jak nie ma wynikow to wysyla blad 404
