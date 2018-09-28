@@ -14,7 +14,7 @@ migrate = Migrate(app, db)  # obiekt reprezentujacy silnik migracji
 login = LoginManager(app)
 login.login_view = 'login'
 
-from app import routes, models  # models - modul okresli strukture bazy danych
+from app import routes, models, errors  # models - modul okresli strukture bazy danych
 
 
 # Sposob na odpalanie aplikacji

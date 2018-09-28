@@ -2,7 +2,7 @@
 set FLASK_APP=microblog.py  # wskazywanie w wirtualnym srodowisku gdzie mamy aplikacje we flasku
 flask run
 
-# debug
+# debugdumped
 set FLASK_ENV=development  # eksportownie zmiennej srodowiskowaj FLASK_ENV i ustawic ja na tryb development przed uruchomieniem serwera
 set FLASK_DEBUG=1  # kontrola trybu debugowania niezaleznie od srodowiska
 
@@ -10,13 +10,13 @@ set FLASK_DEBUG=1  # kontrola trybu debugowania niezaleznie od srodowiska
 flask shell
 
 ###########################################
+# testowanie developersko aplikacji z shellem
+set FLASK_APP=microblog.py
+flask shell
+
+###########################################
 # uruchamianie developersko aplikacji
 set FLASK_APP=microblog.py
 set FLASK_DEBUG=1
+set WERKZEUG_DEBUG_PIN=off
 flask run
-
-###########################################
-# testowanie developersko aplikacji z shellem
-set FLASK_APP=microblog.py
-set FLASK_DEBUG=1
-flask shell
