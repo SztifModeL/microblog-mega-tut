@@ -34,3 +34,13 @@ class EditProfileForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     about_me = TextAreaField('About me', validators=[Length(min=0, max=140)])
     submit = SubmitField('Submit')
+
+    def __init__(self, original_username, *args, **kwargs):
+        super(EditProfileForm, self).__init__(*args, **kwargs)  # przeciazony kontruktor przyjmuje original_username jako argument
+        self.original_username = original_username  # zapis jako zmienna instancji
+
+    def validate_username(self, username):
+        if username.data != self.original_username:  # jesli jest oryginalna i wpisywana nazwa sie roznia
+            user = User.query.filter_by(username=self.username.data).first()  # szukaj w bazie nowej nazwy
+            if user is not None:  # jesli jest juz taka w bazie
+                raise ValidationError('Please use a different username.')
